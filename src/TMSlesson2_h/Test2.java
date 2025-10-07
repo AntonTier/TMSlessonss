@@ -1,4 +1,4 @@
-package TMSlesson2;
+package TMSlesson2_h;
 
 public class Test2 {
 
