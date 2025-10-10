@@ -10,7 +10,8 @@ public class Test4 {
         //SearchMaxMin();
         //CountZeroElements();
         //reverseArray();
-        isIncreasing();
+        //isIncreasing();
+        addOneToNumberArray();
 
     }
 
@@ -229,6 +230,83 @@ public class Test4 {
 
         }
 
+
+    }
+
+    public static void addOneToNumberArray() {
+
+        Scanner input  = new Scanner(System.in);
+        System.out.print("Введите размер массива: ");
+        int size = input.nextInt();
+        int [] array = new int[size];
+
+        System.out.println();
+
+        for (int i=0;i<=array.length-1;i++) {
+
+            System.out.println("Введите " + i + " элемент массива: ");
+            array[i] = input.nextInt();
+
+        }
+
+        System.out.println("Исходный массив:");
+        for (int i = 0;i<=array.length-1;i++) {
+
+            System.out.print(array[i] + " ");
+
+        }
+
+        boolean b = false;
+
+        for (int i = array.length-1;i>=0;i--) {
+
+            if (array[i]<9) {
+
+                array[i]++;
+                break;
+
+            }
+            else {
+
+                array[i] =0;
+
+            }
+
+            if (i==0) {
+
+                b=true;
+
+            }
+
+        }
+
+        if (b) {
+
+            int [] NewArray = new int[array.length+1];
+            NewArray[0] = 1;
+
+            for (int i = 1; i < NewArray.length; i++) {
+                NewArray[i] = array[i - 1];
+            }
+
+            System.out.println();
+            System.out.println("Новый массив:");
+            for (int i = 0;i<=NewArray.length-1;i++) {
+
+                System.out.print(NewArray[i] + " ");
+
+            }
+            return;
+
+        }
+
+        System.out.println();
+        System.out.println("Новый массив:");
+        for (int i = 0;i<=array.length-1;i++) {
+
+            System.out.print(array[i] + " ");
+
+        }
 
     }
 
