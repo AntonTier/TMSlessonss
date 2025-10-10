@@ -7,7 +7,9 @@ public class Test4 {
     public static void main(String[] args) {
 
         //printArrayBothWays();
-        SearchMaxMin();
+        //SearchMaxMin();
+        //CountZeroElements();
+        reverseArray();
 
     }
 
@@ -45,7 +47,7 @@ public class Test4 {
 
     }
 
-    public static void SearchMaxMin() {
+    public static void SearchMaxMin() { //второе и третье задание
 
         Scanner input  = new Scanner(System.in);
         System.out.print("Введите размер массива: ");
@@ -97,6 +99,93 @@ public class Test4 {
         }
 
         System.out.println("Минимальный элемнет: " + min + " а его индекс " + index);
+
+    }
+
+    public static void CountZeroElements() {
+
+        Scanner input  = new Scanner(System.in);
+        System.out.print("Введите размер массива: ");
+        int size = input.nextInt();
+        int [] array = new int[size];
+
+        System.out.println();
+
+        for (int i=0;i<=array.length-1;i++) {
+
+            System.out.println("Введите " + i + " элемент массива: ");
+            array[i] = input.nextInt();
+
+        }
+
+        int count=0;
+
+        for(int i = 0;i<=array.length-1;i++) {
+
+            if (array[i] == 0) {
+
+                count++;
+
+            }
+
+        }
+
+        if (count==0) {
+
+            System.out.println("Нулевых элементов нет");
+
+        }
+        else {
+
+            System.out.println("Количество нулевых элементов равно " + count);
+
+        }
+
+    }
+
+    public static void reverseArray () {
+
+        Scanner input  = new Scanner(System.in);
+        System.out.print("Введите размер массива: ");
+        int size = input.nextInt();
+        int [] array = new int[size];
+
+        System.out.println();
+
+        for (int i=0;i<=array.length-1;i++) {
+
+            array[i] = (int) (Math.random()*100);
+
+        }
+
+        System.out.println("Исходный массив: ");
+        for (int i = 0;i<=array.length-1;i++) {
+
+            System.out.print(array[i] + " ");
+
+        }
+
+        System.out.println();
+        int left = 0;
+        int right = array.length-1;
+
+        while (left<right) {
+
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] =temp;
+
+            left++;
+            right--;
+
+        }
+
+        System.out.println("Новый массив: ");
+        for (int i = 0;i<=array.length-1;i++) {
+
+            System.out.print(array[i] + " ");
+
+        }
 
     }
 
