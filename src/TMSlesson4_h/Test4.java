@@ -69,31 +69,34 @@ public class Test4 {
 
         int min = array[0];
         int max = array[0];
+        int index = 0;
 
         for (int i = 0;i<=array.length-1;i++) {
 
             if (array[i]>max) {
 
                 max=array[i];
+                index=i;
 
             }
 
         }
 
         System.out.println();
-        System.out.println("Максимальный элемент: " + max);
+        System.out.println("Максимальный элемент: " + max + " а его индекс " + index);
 
         for (int i = 0;i<=array.length-1;i++) {
 
             if (array[i]<min) {
 
                 min=array[i];
+                index=i;
 
             }
 
         }
 
-        System.out.println("Минимальный элемнет: " + min);
+        System.out.println("Минимальный элемнет: " + min + " а его индекс " + index);
 
     }
 
