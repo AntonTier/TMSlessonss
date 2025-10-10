@@ -9,7 +9,8 @@ public class Test4 {
         //printArrayBothWays();
         //SearchMaxMin();
         //CountZeroElements();
-        reverseArray();
+        //reverseArray();
+        isIncreasing();
 
     }
 
@@ -186,6 +187,48 @@ public class Test4 {
             System.out.print(array[i] + " ");
 
         }
+
+    }
+
+    public static void isIncreasing() {
+
+        Scanner input  = new Scanner(System.in);
+        System.out.print("Введите размер массива: ");
+        int size = input.nextInt();
+        int [] array = new int[size];
+
+        System.out.println();
+
+        for (int i=0;i<=array.length-1;i++) {
+
+            System.out.println("Введите " + i + " элемент массива: ");
+            array[i] = input.nextInt();
+
+        }
+
+        boolean b = true;
+
+        for (int i = 1;i<=array.length-1;i++) {
+
+            if (array[i-1]>array[i]) {
+
+                b=false;
+
+            }
+
+        }
+
+        if (b) {
+
+            System.out.println("Массив является возрастающим");
+
+        }
+        else {
+
+            System.out.println("Массив не является возрастающим");
+
+        }
+
 
     }
 
