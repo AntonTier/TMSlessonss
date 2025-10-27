@@ -5,11 +5,11 @@ public class Dog1 {
     }
 
     public void voice() {
-        System.out.println("Woof!");
+        System.out.println("ГАв");
     }
 
     public void eat() {
-        System.out.println("Dog is eating.");
+        System.out.println("Собака ест");
     }
 
     public static class DogAccessor {
