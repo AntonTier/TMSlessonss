@@ -20,3 +20,13 @@ public class Dog1 {
         }
     }
 }
+
+class testDog {
+
+    public static void main(String[] args) {
+
+        Dog1.DogAccessor.useDog();
+
+    }
+
+}
