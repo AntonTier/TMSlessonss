@@ -7,15 +7,15 @@ public class Circle extends Figure {
     public void Perimeter() {
 
         System.out.println("Вычисление периметра Круга");
-        Scanner s = new Scanner(System.in);
+        Scanner s1 = new Scanner(System.in);
         int R;
 
         while (true) {
 
             System.out.print("Введите радиус круга: ");
-            R = s.nextInt();
+            R = s1.nextInt();
 
-            if (R>=0) {
+            if (R>0) {
 
                 break;
 
@@ -31,22 +31,22 @@ public class Circle extends Figure {
         System.out.println();
 
         System.out.println("Длина окружности с радуисом " + R + " равен " + (2*3.14*R));
-        s.close();
+
 
     }
 
     public void Square() {
 
         System.out.println("Вычисление площади круга");
-        Scanner s = new Scanner(System.in);
+        Scanner s1 = new Scanner(System.in);
         int R;
 
         while (true) {
 
             System.out.print("Введите радиус окружности: ");
-            R = s.nextInt();
+            R = s1.nextInt();
 
-            if (R>=0) {
+            if (R>0) {
 
                 break;
 
@@ -62,7 +62,7 @@ public class Circle extends Figure {
         System.out.println();
 
         System.out.println("Площадь окружности с радиусом " + R + " равен " + (3.14*R*R));
-        s.close();
+
 
     }
 

@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
             firstSides = s.nextInt();
             System.out.print("Введите оставшиеся две стороны прямоегольника: ");
             secondSides = s.nextInt();
-            if (firstSides>=0 && secondSides>=0) {
+            if (firstSides>0 && secondSides>0) {
 
                 break;
 
@@ -33,7 +33,6 @@ public class Rectangle extends Figure {
         System.out.println();
 
         System.out.println("Периметр прямоугольника со сторонами " + firstSides + " и " + secondSides + " равен " + (firstSides*2 + secondSides*2));
-        s.close();
 
     }
 
@@ -50,7 +49,7 @@ public class Rectangle extends Figure {
             firstSides = s.nextInt();
             System.out.print("Введите оставшиеся две стороны прямоегольника: ");
             secondSides = s.nextInt();
-            if (firstSides>=0 && secondSides>=0) {
+            if (firstSides>0 && secondSides>0) {
 
                 break;
 
@@ -66,7 +65,7 @@ public class Rectangle extends Figure {
         System.out.println();
 
         System.out.println("Площадь прямоугольника со сторонами " + firstSides + " и " + secondSides + " равен " + (firstSides*secondSides));
-        s.close();
+
 
     }
 
