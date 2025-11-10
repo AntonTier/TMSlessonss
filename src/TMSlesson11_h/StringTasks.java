@@ -11,6 +11,8 @@ public class StringTasks {
         task1(scanner);
         task2(scanner);
         task3(scanner);
+        task4(scanner);
+        task5(scanner);
 
         scanner.close();
 
@@ -105,4 +107,70 @@ public class StringTasks {
 
     }
 
+    public static boolean UniqueChars(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static void task4(Scanner scanner) {
+
+        String [] strings = inputStrokes(scanner);
+
+        String result = null;
+        for (String str:strings) {
+
+            if (UniqueChars(str)) {
+
+                result = str;
+                break;
+
+            }
+
+        }
+
+        if (result!=null) {
+
+            System.out.println("Строка с уникальными символами: " + result);
+
+        }
+        else {
+
+            System.out.println("Строк с уникальными символами нет");
+
+        }
+
+    }
+
+    public static String doubleLetter(String str) {
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+
+            char c = str.charAt(i);
+            result.append(c).append(c);
+
+        }
+
+        return result.toString();
+    }
+
+    public static void task5(Scanner scanner) {
+
+        System.out.print("Введите строку которую хотите удвоить: ");
+        String input = scanner.nextLine();
+
+        String res = doubleLetter(input);
+
+        System.out.println("Строка до удвоения: " + input);
+        System.out.println("Строка после удвоения: " + res);
+
+
+    }
 }
