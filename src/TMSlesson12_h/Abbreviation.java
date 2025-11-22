@@ -25,6 +25,8 @@ public class Abbreviation {
 
         }
 
+        scanner.close();
+
     }
 
     public static void main(String[] args) {
