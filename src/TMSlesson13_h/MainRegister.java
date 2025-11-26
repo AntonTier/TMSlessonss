@@ -2,7 +2,7 @@ package TMSlesson13_h;
 
 import java.util.Scanner;
 
-public class Main {
+public class MainRegister {
 
     public static void main(String[] args) {
 
