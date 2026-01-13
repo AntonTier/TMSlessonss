@@ -19,12 +19,10 @@ public class FirstTask {
     private static List<Integer> parseStringToIntegerList(String input) {
         List<Integer> result = new ArrayList<>();
 
-        // Разделяем строку по запятым
         String[] parts = input.split(",");
 
         for (String part : parts) {
             try {
-                // Убираем пробелы и преобразуем в число
                 int number = Integer.parseInt(part.trim());
                 result.add(number);
             } catch (NumberFormatException e) {
@@ -38,11 +36,13 @@ public class FirstTask {
     private static String formatListToString(Collection<Integer> numbers) {
         StringBuilder sb = new StringBuilder();
 
-        for (Iterator<Integer> iterator = numbers.iterator(); iterator.hasNext();) {
-            sb.append(iterator.next());
-            if (iterator.hasNext()) {
+        boolean isFirst = true;
+        for (int number : numbers) {
+            if (!isFirst) {
                 sb.append(", ");
             }
+            sb.append(number);
+            isFirst = false;
         }
 
         return sb.toString();
